@@ -77,7 +77,7 @@ public class UserList
 
         for(int number : nArray)
         {
-            tempPos = 0;
+            tempPos++;
             if(smallestElement > number)
             {
                 smallestElement = number;

@@ -20,10 +20,12 @@ public class EvenList
 
     private void ShowOverallInfo()
     {
-        if(numberFirst <= numberSecond)
+        if(numberFirst >= numberSecond)
         {
-            System.out.println("Algorytm nie wykona sie. Liczby są równe, lub pierwsza jest mniejsza od drugiej.");
-            return;
+            // zamiana zmiennych
+            int temp = numberFirst;
+            numberFirst = numberSecond;
+            numberSecond = temp;
         }
         for(int i = this.numberFirst; i <= numberSecond; i++)
         {
