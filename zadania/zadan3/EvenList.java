@@ -75,7 +75,19 @@ public class EvenList
 
                     break;
                 }
+            
+            if(numberSecond == numberFirst)
+            {
+                System.out.println("Obie liczby sa takie same");
+                continue;
+            }
 
+            if(numberSecond-1 == numberFirst || numberSecond+1 == numberFirst)
+            {
+                System.out.println("Liczby roznia sie tylko o 1");
+                continue;
+            }
+            
             EvenList d = new EvenList(numberSecond, numberFirst);
             scan.hasNextLine();
             d.ShowOverallInfo();

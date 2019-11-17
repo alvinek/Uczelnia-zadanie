@@ -30,6 +30,11 @@ public class Factorial
 
     private void showOverallInfo()
     {
+        if(fact < 0)
+        {
+            System.out.println("Podana liczba jest niepoprawna (ujemna).");
+            return;
+        }
         int out = 1;
         int temp = 0;
         for(int i = 1; i <= fact; i++)
@@ -57,18 +62,17 @@ public class Factorial
                 fact = scan.nextInt();
                 break;
             }
-            else 
-            if(fact < 0)
-            {
-                System.out.println("Podana liczba jest niepoprawna (ujemna).");
-                scan.nextLine();
-            }
             else
             {
-                System.out.println("Podana liczba jest niepoprawna.");
-                scan.nextLine();
+                System.out.println("Podana liczba jest niepoprawna. Sprobuj ponownie");
+                scan.next();
                 continue;
             }
+        }
+
+        if(fact >= 16)
+        {
+            System.out.println("Wynik bedzie nie do umieszczenia w typie Integer!");
         }
 
         Factorial d = new Factorial(fact);
