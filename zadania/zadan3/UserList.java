@@ -57,19 +57,32 @@ public class UserList
         // liczba dodatnich elementow tablicy
 
         int biggestElement = nArray[0];
+        int tempPos = 0;
+        int biggestElementPos = 0;
+
 
         for(int number : nArray)
         {
+            tempPos++;
             if(biggestElement < number)
+            {
                 biggestElement = number;
+                biggestElementPos = tempPos;
+            }
         }
 
         int smallestElement = nArray[0];
+        int smallestElementPos = 0;
+        tempPos = 0;
 
         for(int number : nArray)
         {
+            tempPos = 0;
             if(smallestElement > number)
+            {
                 smallestElement = number;
+                smallestElementPos = tempPos;
+            }
         }
 
         int addedElements = 0;
@@ -94,8 +107,8 @@ public class UserList
         if(!elementsAboveZero.equals(""))
         elementsAboveZero = elementsAboveZero.substring(0, elementsAboveZero.length()-1);
 
-        System.out.println("Najwiekszy element: " + biggestElement);
-        System.out.println("Najmniejszy element: " + smallestElement);
+        System.out.println("Najwiekszy element: " + biggestElement + " pozycja: " + biggestElementPos);
+        System.out.println("Najmniejszy element: " + smallestElement + " pozycja: " + smallestElementPos);
         System.out.println("Srednia elementow: " + averageOfElements);
         System.out.println("Dodatnie elementy: " + elementsAboveZero);
         s.nextLine();
